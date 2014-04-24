@@ -12,8 +12,9 @@
     // from global.jQuery.
     var _ = require('underscore');
     var Eventable = require('eventablejs');
+    var $ = (typeof global !== "undefined" && global.jQuery) ? global.jQuery : require('jquery');
 
-    module.exports = factory(_, Eventable, global.jQuery);
+    module.exports = factory(_, Eventable, $);
   } else {
     // Browser globals
 
